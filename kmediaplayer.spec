@@ -6,7 +6,7 @@
 #
 Name     : kmediaplayer
 Version  : 5.103.0
-Release  : 50
+Release  : 51
 URL      : https://download.kde.org/stable/frameworks/5.103/portingAids/kmediaplayer-5.103.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.103/portingAids/kmediaplayer-5.103.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.103/portingAids/kmediaplayer-5.103.0.tar.xz.sig
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676322974
+export SOURCE_DATE_EPOCH=1676849895
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -96,7 +96,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676322974
+export SOURCE_DATE_EPOCH=1676849895
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kmediaplayer
 cp %{_builddir}/kmediaplayer-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/kmediaplayer/08ffcf85a07d9a9f1101498127ec1b932b47b74b || :
