@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kmediaplayer
-Version  : 5.104.0
-Release  : 52
-URL      : https://download.kde.org/stable/frameworks/5.104/portingAids/kmediaplayer-5.104.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.104/portingAids/kmediaplayer-5.104.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.104/portingAids/kmediaplayer-5.104.0.tar.xz.sig
+Version  : 5.105.0
+Release  : 53
+URL      : https://download.kde.org/stable/frameworks/5.105/portingAids/kmediaplayer-5.105.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.105/portingAids/kmediaplayer-5.105.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.105/portingAids/kmediaplayer-5.105.0.tar.xz.sig
 Summary  : Plugin interface for media player features
 Group    : Development/Tools
 License  : X11
@@ -73,15 +73,15 @@ license components for the kmediaplayer package.
 
 
 %prep
-%setup -q -n kmediaplayer-5.104.0
-cd %{_builddir}/kmediaplayer-5.104.0
+%setup -q -n kmediaplayer-5.105.0
+cd %{_builddir}/kmediaplayer-5.105.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679599346
+export SOURCE_DATE_EPOCH=1681752645
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -97,7 +97,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1679599346
+export SOURCE_DATE_EPOCH=1681752645
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kmediaplayer
 cp %{_builddir}/kmediaplayer-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/kmediaplayer/08ffcf85a07d9a9f1101498127ec1b932b47b74b || :
@@ -131,7 +131,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5MediaPlayer.so.5
-/usr/lib64/libKF5MediaPlayer.so.5.104.0
+/usr/lib64/libKF5MediaPlayer.so.5.105.0
 
 %files license
 %defattr(0644,root,root,0755)
